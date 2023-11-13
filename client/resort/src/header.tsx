@@ -20,14 +20,14 @@ function Header() {
     <Icon icon="ci:menu-alt-02" width={40} className='text-white'/>
     </div>
     </div>
-  <div  className={`md2:flex  ${isNavOpen ? 'block' : 'hidden'}  md2:justify-between md2:items-center   text-center`}>
+  <div  className={`md2:flex  ${isNavOpen ? 'block' : 'hidden'}  md2:justify-between md2:items-center text-center`}>
   {/* <ul className=' md:flex pr-16 hidden justify-center items-center text-slate-200 text-xl font-forum '> */}
   <ul className='text-white md:text-slate-200 text-2xl  md2:flex font-forum pt-2 text-center '>
  
         <li className='px-4  md2:py-0 md2:pr-4'><Link to="/">Home</Link></li>
         <li className='px-4 py-3  md2:pr-4 md2:py-0'><Link to="/">About us</Link></li>
         <li className='px-4 py-2 md2:pr-4 md2:py-0'><Link to="/rooms">Rooms</Link></li>
-        <li className='px-4 py-3 md2:pr-16 md2:py-0' ><Link to="/contact">Contact</Link></li>
+        <li className='px-4 py-3 md2:pr-16 md2:py-0' ><Link to="/cot">Contact</Link></li>
     </ul>
     <button className='bg-primary-300  md2:bg-primary-200 text-slate-100 px-9 py-2 mt-4'>Book</button>
   

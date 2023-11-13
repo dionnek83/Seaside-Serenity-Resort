@@ -11,6 +11,7 @@ module.exports = {
       "primary-100": "#FFF0E5",
       "gray-100": "#666565",
       "black-200": "#353535",
+      "gray-50": "#EFEDEC"
       
     },
     backgroundImage: (theme) => ({

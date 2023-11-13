@@ -8,7 +8,7 @@ const RoomImage= (props: { image: any; }) => {
   };
 
   return (
-    <div className="w-screen md2:w-full h-80  md2:h-screen " style={divStyle}>
+    <div className="md2:w-full h-80  md2:h-screen " style={divStyle}>
       {/* Your content goes here */}
     </div>
   );

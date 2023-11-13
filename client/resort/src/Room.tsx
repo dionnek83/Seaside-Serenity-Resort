@@ -6,6 +6,11 @@ import Footer from './footer';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import RoomImage from './RoomImage';
 
+import Popup from 'reactjs-popup';
+
+import 'reactjs-popup/dist/index.css';
+import { BookingForm } from './BookingForm';
+
 const Room = () => {
   const location = useLocation();
  
@@ -114,8 +119,10 @@ axios.get("http://localhost:8081/rooms/"+location.state).then(res =>(
   <h1 className='font-kameron  mb-4  text-3xl md:text-4xl md2:text-3xl md2:text-left '>Description</h1>
   <p className='px-6 mb-6 text-gray-100 text-left max-w-xl mx-auto sm:text-xl md:px-0 md:text-2xl md2:text-xl '>{data["Description"]} </p>
   <p className='px-6 text-gray-100 text-left max-w-xl mx-auto sm:text-xl md:text-2xl md:px-0 md2:text-xl'>{data["Additional_Info"]}</p>
-  <button className='bg-primary-200  text-slate-200 px-10 mb-14 py-2 md2:float-right  mt-6 md:px-12 md:py-3 text-lg md2:mt-12'>Book Room</button>
+  {/* <button className='bg-primary-200  text-slate-200 px-10 mb-14 py-2 md2:float-right  mt-6 md:px-12 md:py-3 text-lg md2:mt-12'>Book Room</button> */}
+  <BookingForm />
   </div>
+
 </div>
 
 {/* OTHER ROOMS --------------------------------------------- */}
@@ -157,51 +164,11 @@ axios.get("http://localhost:8081/rooms/"+location.state).then(res =>(
 </div>
 
   ))}
-  {/* {roomData?.map((data) => (
-    <div>
-
-<img src={data["Image"]} alt="" />
-<div>
-  <h1>{data["Name"]}</h1>
-  <p>N${data["Price"]}/Night</p>
-</div>
-
-<div>
-  <div className='left-side'>
-<h3>Amenities</h3>
-
-<span>Icon + Name</span>
-<span>Icon + Name</span>
-<span>Icon + Name</span>
-<span>Icon + Name</span>
-<span>Icon + Name</span>
-  </div>
-
-<div className='right-side'>
-  
-  <p>{data["Description"]} </p>
-  <p>{data["Additional_Info"]}</p>
-  <button>Book Room</button>
-  </div>
-</div> */}
-  
-{/* OTHER ROOMS --------------------------------------------- */}
-
-{/* <div>
-  <h3>Similar rooms</h3>
+ 
 
 
 
-
-</div>
-
-
-    </div>
-
-
-    {/* ))} */}
   </section>
-  
     <Footer/>
 </>
 }
