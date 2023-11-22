@@ -28,6 +28,7 @@ function Header() {
         <li className='px-4 py-3  md2:pr-4 md2:py-0'><Link to="/">About us</Link></li>
         <li className='px-4 py-2 md2:pr-4 md2:py-0'><Link to="/rooms">Rooms</Link></li>
         <li className='px-4 py-3 md2:pr-16 md2:py-0' ><Link to="/contact">Contact</Link></li>
+        <li className='px-4  md2:py-0 md2:pr-4'><Link to="/booking-details">Details</Link></li>
     </ul>
     <button className='bg-primary-300  md2:bg-primary-200 text-slate-100 px-9 py-2 mt-4'>Book</button>
   

@@ -55,7 +55,7 @@ export const Rooms = () => {
 
 
 <div className='shadow-xl  w-80  sm:w-96  relative pb-4 mb-7 mx-auto '>
-<Link to='/room' state={room["RoomID"] } className='w-full'>
+<Link to={`/rooms/${room["RoomID"]}`} state={room["RoomID"] } className='w-full'>
 <img src={room["Image"]} alt=""  className='h-64 w-full'/>
 
 </Link>

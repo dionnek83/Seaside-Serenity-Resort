@@ -9,6 +9,7 @@ import { Icon } from '@iconify/react';
 import Testimonials from './testimonials';
 import {Link} from 'react-router-dom';
 import Room from './Room';
+import { motion, useScroll } from "framer-motion"
 
 function Home() {
 const [rooms, setRooms] = useState([]);
@@ -158,7 +159,7 @@ axios.get("http://localhost:8081/retrieve-three-rooms").then(res => setRooms(res
 
 
 <div className='shadow-xl  w-80 sm:w-96  relative pb-4 mb-7 mx-auto '>
-<Link to='/room' state={room["RoomID"]}>
+<Link to={`/rooms/${room["RoomID"]}`} state={room["RoomID"]}>
 <img src={room["Image"]} alt=""  />
 </Link>
  

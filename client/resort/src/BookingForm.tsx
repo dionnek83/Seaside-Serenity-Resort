@@ -7,11 +7,11 @@ export const BookingForm = () => {
   return (
    
       <Popup trigger={<button className="bg-primary-200  text-slate-200 px-10 mb-14 py-2 md2:float-right  mt-6 md:px-12 md:py-3 text-lg md2:mt-12"> Book Room </button>} modal>
-       <div className='font-forum  md:px-0   flex flex-col md:flex-row md:justify-between '>
-       <img src={beach} alt=""  className='w-1/2 h-auto pr-4 hidden md:block' />
-       <div className=' mr-4'>
+       <div className='font-forum  md:px-0   flex flex-col md:flex-row md:justify-between  '>
+       <img src={beach} alt=""  className='w-1/2 h-auto  hidden md:block' />
+       <div className=' mr-4 flex flex-col'>
         <h3 className='font-medium font-kameron text-2xl pt-2'>Make your Reservation</h3>
-        <form action="" className='flex flex-col mt-2 w-80 '>
+        <form action="" className=' mt-2  '>
         <label htmlFor="" className='font-bold mb-1'>Check-In</label>
         <input type="date" name="" id="" placeholder='yyyy/mm/dd' className='bg-gray-50 py-2 px-1 mb-1'/>
         <label htmlFor=""  className='font-bold mb-1'>Check-Out</label>

@@ -1,18 +1,26 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useLocation, useParams} from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import RoomImage from './RoomImage';
 
 import Popup from 'reactjs-popup';
+import { useNavigate } from "react-router-dom"
 
 import 'reactjs-popup/dist/index.css';
 import { BookingForm } from './BookingForm';
 
+import { redirect } from 'react-router';
+
+
+
 const Room = () => {
+  const { id } = useParams();
   const location = useLocation();
+
+  const navigate = useNavigate()
  
   const [roomData, setRoomData] = useState([]);
 
@@ -20,6 +28,8 @@ const Room = () => {
 
   const [amenities, setAmenities] = useState([]);
 
+  const onClickHandler = () => navigate(`/rooms/${id}`)
+  
  // const [amenityName, setAmenityName] = useState([]);
 
   let amenityicon;
@@ -79,6 +89,7 @@ axios.get("http://localhost:8081/rooms/"+location.state).then(res =>(
 
   
 //  console.log(similarRooms)
+console.log(id)
   return <>
   <Header/>
   <section className='w-full'>
@@ -138,8 +149,8 @@ axios.get("http://localhost:8081/rooms/"+location.state).then(res =>(
 
 
 <div className='shadow-xl  w-80 h-fit sm:w-96  relative pb-4 mb-7 mx-auto '>
-<Link to='/room' state={room["RoomID"] } className='w-full'>
-<img src={room["Image"]} alt=""  className='h-64 w-full'/>
+<Link  to={`/rooms/${room["RoomID"]}`} state={room["RoomID"] } className='w-full'>
+<img src={room["Image"]} alt="" onClick={onClickHandler}  className='h-64 w-full'/>
 
 </Link>
  
