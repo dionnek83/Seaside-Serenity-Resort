@@ -8,11 +8,17 @@ app.use(cors());
 app.use(express.json())
 
 
-const db = mysql.createConnection({host:"localhost",
+// const db = mysql.createConnection({host:"localhost",
+// user:"root",
+// password:"",
+// database:"seaside_resort"
+// })
 
-user:"root",
-password:"",
-database:"seaside_resort"
+
+const db = mysql.createConnection({host:"sql5.freesqldatabase.com",
+user:"sql5670603",
+password:"8gPej5PxHa",
+database:"sql5670603"
 })
 
 
@@ -49,7 +55,7 @@ const roomID = req.params.id;
 app.get('/room-amenities/:id', (req, res)=>{
     const roomID = req.params.id;
 
-        const sql = "Select Name From amenities INNER JOIN roomamenities ON amenities.Amenity_ID = roomamenities.Amenity_ID AND roomamenities.Room_ID = ?";
+        const sql = "Select Name From amenities INNER JOIN roomamenities ON amenities.Amenity_ID = roomamenities.Amenity_ID AND roomamenities.RoomID = ?";
         db.query(sql, [roomID], (err, result)=>{
             if(err) return res.json({Message: "Error retrieving rooom amenities"});
             return res.json(result);
