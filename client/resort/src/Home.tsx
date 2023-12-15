@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from './header';
-import Footer from './footer';
+import Footer from './footer'; 
 import pool from './assets/images/pool-image.jpg';
 import room from './assets/images/room-preview.jpg';
 import room_two from './assets/images/room-preview-two.jpg'
