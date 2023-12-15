@@ -1,0 +1,11 @@
+# netlify.toml
+
+[build]
+  command = "npm run build"  # Replace this with your build command
+  publish = "client/resort/build"   # Replace this with your client build output directory
+
+# If your React app uses a specific Node.js version, specify it here
+[build.environment]
+  NODE_VERSION = "21"
+
+
