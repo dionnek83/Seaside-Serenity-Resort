@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import Header from './header'
 import Footer from './footer'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Icon } from '@iconify/react/dist/iconify.js';
+//import { Icon } from '@iconify/react/dist/iconify.js';
 
 export const Rooms = () => {
 

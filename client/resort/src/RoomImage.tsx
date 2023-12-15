@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const RoomImage= (props: { image: any; }) => {
   const divStyle = {

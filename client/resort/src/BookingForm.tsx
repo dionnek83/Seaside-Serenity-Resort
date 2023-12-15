@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Popup from 'reactjs-popup';
 import beach from './assets/images/pool-image.jpg'
 

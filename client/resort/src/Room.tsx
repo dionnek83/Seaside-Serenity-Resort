@@ -1,18 +1,15 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import {Link, useLocation, useParams} from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import RoomImage from './RoomImage';
-
-import Popup from 'reactjs-popup';
 import { useNavigate } from "react-router-dom"
-
 import 'reactjs-popup/dist/index.css';
 import { BookingForm } from './BookingForm';
 
-import { redirect } from 'react-router';
+
 
 
 
@@ -30,36 +27,41 @@ const Room = () => {
 
   const onClickHandler = () => navigate(`/rooms/${id}`)
   
- // const [amenityName, setAmenityName] = useState([]);
-
-  let amenityicon;
-  let amenityName = ""
-
+ //const [amenityicon, setAmenityName] = useState([]);
+var amenityicon;
+  
   function getIcon(amenityName: any){
+    
   switch(amenityName){
 case "Free Wifi":
- return amenityicon = <Icon icon="material-symbols-light:wifi" width={30} className='text-primary-200' />
-  break;
+  amenityicon = <Icon icon="material-symbols-light:wifi" width={30} className='text-primary-200' />
+ return amenityicon 
+ break;
 
   case "Air Condition":
-    return amenityicon = <Icon icon="iconoir:air-conditioner" width={30} className='text-primary-200 '  />
-  break;
+     amenityicon = <Icon icon="iconoir:air-conditioner" width={30} className='text-primary-200 '  />
+    return amenityicon 
+    break;
 
   case "Laundry":
-    return amenityicon = <Icon icon="solar:washing-machine-linear" width={30} className='text-primary-200'  />
-  break;
+    amenityicon = <Icon icon="solar:washing-machine-linear" width={30} className='text-primary-200'  />
+    return amenityicon 
+    break;
 
   case "TV":
-    return amenityicon = <Icon icon="solar:tv-linear" width={30} className='text-primary-200' />
-  break;
+    amenityicon = <Icon icon="solar:tv-linear" width={30} className='text-primary-200' />
+    return amenityicon 
+    break;
 
   case "Hair Dryer":
-    return amenityicon = <Icon icon="mdi:hair-dryer-outline" width={30} className='text-primary-200' />
-  break;
+   amenityicon = <Icon icon="mdi:hair-dryer-outline" width={30} className='text-primary-200' />
+    return amenityicon 
+    break;
 
   case "Fridge":
-    return amenityicon = <Icon icon="tabler:fridge" width={30} className='text-primary-200' />
-  break;
+    amenityicon = <Icon icon="tabler:fridge" width={30} className='text-primary-200' />
+    return amenityicon 
+    break;
   }
   }
 

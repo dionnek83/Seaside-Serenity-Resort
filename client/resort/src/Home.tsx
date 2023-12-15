@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Header from './header';
 import Footer from './footer';
@@ -8,8 +8,7 @@ import room_two from './assets/images/room-preview-two.jpg'
 import { Icon } from '@iconify/react';
 import Testimonials from './testimonials';
 import {Link} from 'react-router-dom';
-import Room from './Room';
-import { motion, useScroll } from "framer-motion"
+
 
 function Home() {
 const [rooms, setRooms] = useState([]);
