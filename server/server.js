@@ -6,6 +6,7 @@ import cors from 'cors'
 const app = express();
 app.use(cors());
 app.use(express.json())
+const port = process.env.PORT || 8081;
 
 
 // const db = mysql.createConnection({host:"localhost",
@@ -110,6 +111,6 @@ app.get('/available-rooms', (req, res)=>{
 
 
 
-app.listen(8081, ()=> {
+app.listen(port, ()=> {
     console.log("listen")
 })
