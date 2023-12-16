@@ -2,6 +2,7 @@
 
 [build]
   command = "npm run build"  # Replace this with your build command
+  publish = "dist"
   
 
 # If your React app uses a specific Node.js version, specify it here
