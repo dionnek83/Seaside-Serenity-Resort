@@ -33,6 +33,7 @@ app.get('/', (req, res)=>{
 })
 
 
+
 // RETRIEVE THE FIRST 3 ROOMS -----------------------------------
 app.get('/retrieve-three-rooms', (req, res)=>{
     const sql = "SELECT * FROM rooms LIMIT 3";
