@@ -27,7 +27,8 @@ database:"sql5670603"
 app.get('/', (req, res)=>{
     const sql = "SELECT * FROM rooms";
     db.query(sql, (err, result)=>{
-        if(err) return res.json({Message: "Error inside server"});
+        // if(err) return res.json({Message: "Error inside server"});
+        if(err) return err;
         return res.json(result);
     }) 
 })
