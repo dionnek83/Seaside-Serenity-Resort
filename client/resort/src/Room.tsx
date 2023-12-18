@@ -79,7 +79,7 @@ axios.get("https://resort-backend.onrender.com/rooms/"+location.state).then(res 
 
   // Retrieve Similar rooms ----------------------------------------------------
   useEffect(()=>{
-    axios.get("hhttps://resort-backend.onrender.com/similar-rooms/"+location.state).then(res => setSimilarRooms(res.data)).catch(err=> console.log(err))
+    axios.get("https://resort-backend.onrender.com/similar-rooms/"+location.state).then(res => setSimilarRooms(res.data)).catch(err=> console.log(err))
       },[])
 
      
