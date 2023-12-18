@@ -67,7 +67,7 @@ case "Free Wifi":
 
   // Retrieve Rooms ---------------------------------------------------------------
   useEffect(()=>{
-axios.get("http://localhost:8081/rooms/"+location.state).then(res =>(
+axios.get("https://resort-backend.onrender.com/rooms/"+location.state).then(res =>(
   
   setRoomData(res.data)
   
@@ -79,14 +79,14 @@ axios.get("http://localhost:8081/rooms/"+location.state).then(res =>(
 
   // Retrieve Similar rooms ----------------------------------------------------
   useEffect(()=>{
-    axios.get("http://localhost:8081/similar-rooms/"+location.state).then(res => setSimilarRooms(res.data)).catch(err=> console.log(err))
+    axios.get("hhttps://resort-backend.onrender.com/similar-rooms/"+location.state).then(res => setSimilarRooms(res.data)).catch(err=> console.log(err))
       },[])
 
      
 
       // Retrieve Amenities ---------------------------------------------------------
       useEffect(()=>{
-        axios.get("http://localhost:8081/room-amenities/"+location.state).then(res => setAmenities(res.data)).catch(err=> console.log(err))
+        axios.get("https://resort-backend.onrender.com/room-amenities/"+location.state).then(res => setAmenities(res.data)).catch(err=> console.log(err))
           },[])
 
   

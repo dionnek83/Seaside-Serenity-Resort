@@ -6,7 +6,7 @@ import cors from 'cors'
 const app = express();
 app.use(cors());
 app.use(express.json())
-const port = process.env.PORT || 8081;
+//const port =  8081;
 
 
 // const db = mysql.createConnection({host:"localhost",
@@ -27,8 +27,8 @@ database:"sql5670603"
 app.get('/', (req, res)=>{
     const sql = "SELECT * FROM rooms";
     db.query(sql, (err, result)=>{
-        // if(err) return res.json({Message: "Error inside server"});
-        if(err) return err;
+        if(err) return res.json({Message: "Error inside server"});
+        // if(err) return err;
         return res.json(result);
     }) 
 })
@@ -39,7 +39,8 @@ app.get('/', (req, res)=>{
 app.get('/retrieve-three-rooms', (req, res)=>{
     const sql = "SELECT * FROM rooms LIMIT 3";
     db.query(sql, (err, result)=>{
-        if(err) return res.json({Message: "Error inside server"});
+     if(err) return res.json({Message: "Error inside server"});
+    //  if(err) return console.log(err);
         return res.json(result);
     })
 })
@@ -113,6 +114,6 @@ app.get('/available-rooms', (req, res)=>{
 
 
 
-app.listen(port, ()=> {
+app.listen(8081, ()=> {
     console.log("listen")
 })

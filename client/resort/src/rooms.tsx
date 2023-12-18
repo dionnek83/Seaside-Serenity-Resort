@@ -11,7 +11,7 @@ export const Rooms = () => {
 
 
     useEffect(()=>{
-  axios.get("http://localhost:8081/").then(res => setRooms(res.data)).catch(err=> console.log(err))
+  axios.get("https://resort-backend.onrender.com/").then(res => setRooms(res.data)).catch(err=> console.log(err))
     },[])
 
   return <>

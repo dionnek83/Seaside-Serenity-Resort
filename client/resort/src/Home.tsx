@@ -15,7 +15,7 @@ const [rooms, setRooms] = useState([]);
 
 
   useEffect(()=>{
-axios.get("http://localhost:8081/retrieve-three-rooms").then(res => setRooms(res.data)).catch(err=> console.log(err))
+axios.get("https://resort-backend.onrender.com/retrieve-three-rooms").then(res => setRooms(res.data)).catch(err=> console.log(err))
   },[])
   
   
