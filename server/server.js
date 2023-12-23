@@ -17,10 +17,11 @@ app.use(express.json())
 
 
 const db = mysql.createConnection({host:"sql5.freesqldatabase.com",
-user:"sql5670603",
-password:"8gPej5PxHa",
-database:"sql5670603"
+user:"sql10672489",
+password:"pp82e3BMy5",
+database:"ssql10672489"
 })
+
 
 
 // RETRIEVES ALL THE ROOMS ------------------
@@ -114,6 +115,6 @@ app.get('/available-rooms', (req, res)=>{
 
 
 
-app.listen(3000, ()=> {
+app.listen(3306, ()=> {
     console.log("Listening on port 3000")
 })
