@@ -16,10 +16,10 @@ app.use(express.json())
 // })
 
 
-const db = mysql.createConnection({host:"sql10.freesqldatabase.com",
-user:"sql10672489",
-password:"pp82e3BMy5",
-database:"sql10672489"
+const db = mysql.createConnection({host:"sql11.freesqldatabase.com",
+user:"sql11681499",
+password:"gmNiXJKIhu",
+database:"sql11681499"
 })
 
 

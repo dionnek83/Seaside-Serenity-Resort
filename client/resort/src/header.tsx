@@ -15,7 +15,8 @@ function Header() {
   //  <nav className=' md:flex justify-between  pt-4 pb-3 px-6 z-10   bg-black bg-opacity-50 fixed top-0 w-full '>
   <nav className='z-10 px-4 py-4 md2:px-10 bg-black bg-opacity-75 md2:flex md2:justify-between md2:bg-opacity-50 fixed top-0 w-full '>
     <div className='flex justify-between'>
-    <h1 className='font-milt text-white '>Seaside Serenity <br /><span className='font-forum text-center'> Resort</span></h1>
+      <Link to="/">Seaside Serenity Resort</Link>
+    {/* <h1 className='font-milt text-white '>Seaside Serenity <br /><span className='font-forum text-center'> Resort</span></h1> */}
     <div className="md2:hidden cursor-pointer" onClick={toggleNav}>
     <Icon icon="ci:menu-alt-02" width={40} className='text-white'/>
     </div>
